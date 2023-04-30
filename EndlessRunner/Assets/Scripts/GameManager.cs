@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("HacerPincho", 0, tiempoPinchos);
+        StartCoroutine(HacerPincho());
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void  HacerPincho()
+    IEnumerator  HacerPincho()
     {
         float value = Random.value;
 
@@ -65,6 +65,17 @@ public class GameManager : MonoBehaviour
             go = Instantiate(pinchoPrefab);
             go.transform.position = new Vector3(linea2.position.x, transform.position.y, 0);
         }
+
+        yield return new  WaitForSeconds(tiempoPinchos);
+        
+        if(tiempoPinchos>0.4)
+            tiempoPinchos -= 0.01f;
+        else
+        {
+            tiempoPinchos = 0.3f;
+        }
+
+        StartCoroutine(HacerPincho());
 
     }
 

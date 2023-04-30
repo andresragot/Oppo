@@ -41,7 +41,10 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Time.timeScale = 0;
-        gameOver.SetActive(true);
+        if(collision.gameObject.tag == "Pincho")
+        {
+            Time.timeScale = 0;
+            gameOver.SetActive(true);
+        }
     }
 }
