@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5936986439243187473}
   - component: {fileID: 5936986439243187478}
   - component: {fileID: -922132148074115889}
+  - component: {fileID: 1820497480948406838}
   m_Layer: 0
   m_Name: Isometric Diamond
   m_TagString: Pincho
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 3625043607559282579, guid: 7ab6adcffd420704da8295ec3041d37f, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1193549241, guid: 3f0b4748163dfc14d8df2f155936727a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,7 +105,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    oldSize: {x: 0.77, y: 0.63}
     newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -112,10 +113,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.25}
-      - {x: -0.5, y: -0.008697033}
-      - {x: 0, y: -0.25}
-      - {x: 0.5, y: 0}
+    - - {x: -0.0034375945, y: -0.031882763}
+      - {x: -0.38999695, y: 0.3109994}
+      - {x: -0.0034375957, y: -0.31187677}
+      - {x: 0.37968415, y: 0.31282115}
 --- !u!50 &5936986439243187478
 Rigidbody2D:
   serializedVersion: 4
@@ -150,3 +151,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoPincho: 3
+--- !u!95 &1820497480948406838
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936986439243187479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c2d3ed217ad1104da4290e93fe7bac2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

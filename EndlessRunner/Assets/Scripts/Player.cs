@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[System.Serializable]
+public class MyEvent : UnityEngine.Events.UnityEvent
+{
+
+}
 public class Player : MonoBehaviour
 {
 
@@ -11,10 +17,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     GameObject gameOver;
 
+    //evento de muerte
+    [SerializeField]
+    protected MyEvent whenDie;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +55,7 @@ public class Player : MonoBehaviour
         {
             Time.timeScale = 0;
             gameOver.SetActive(true);
+            whenDie.Invoke();
         }
     }
 }
